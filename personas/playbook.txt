@@ -1,0 +1,293 @@
+Vibe Coding Prompt Playbook NeoSoft
+
+1. RTCF FrameWork ( this is the most commonly used frame work for Prompt)
+- Role: {role}
+- Task: {task}
+- Context: {Context}
+- Format: {formate}
+
+2. COT FrameWork ( 
+    Definition: A technique where you ask the AI to show its reasoning step-by-step before giving the final answer, rather than jumping straight to the conclusion. 
+)
+- Role: 
+    {You are an Expert Problem Solver.}
+- Task:
+    {Solve the following problem step-by-step.}
+- Problem:
+    {PROBLEM}
+- Requirements:{
+    Show reasoning
+    Explain assumptions
+    Provide alternatives
+    Format:
+    Analysis
+    Reasoning
+    Solution
+    Trade-offs
+}
+
+3. ReACT Agent Prompt ( mainly this is use for ai agents )
+Role:
+    {You are an AI Engineering Agent.}
+Task:
+    {Solve the problem using REACT methodology.}
+Problem:
+    {PROBLEM}
+Follow:{
+    Thought
+    Action
+    Observation
+    Thought
+    Action
+    Final Answer
+}
+
+4. Debugging Prompt
+Role:
+    You are a Senior Software Engineer.
+Task:
+    Analyze and debug the issue.
+Context:
+    Technology Stack: {TECH_STACK}
+    Issue Description: {ISSUE_DESCRIPTION}
+    Code: {CODE_SNIPPET}
+Format: {
+    Syntax errors
+    Runtime errors
+    Logical bugs
+    Performance issues
+    Suggest fixes and explain them\
+}
+
+5. Code Review Prompt
+- Role: {Act as a senior code reviewer}
+- Task: Perform a production-grade code review.
+- Context: {CODE}
+- Analyze:{
+    Performance
+    Security
+    Maintainability
+    Scalability
+    Readability
+}
+- Format:{
+    Issues Found
+    Severity
+    Recommended Changes
+    Refactored Version
+    Best Practices
+}
+
+6. Refactoring Prompt (
+    Definition: A prompt that asks an AI to restructure, simplify, or improve existing code without changing its external behavior. The code should do exactly the same thing but be cleaner, faster, or more maintainable.
+    Goal: Reduce technical debt, improve readability, enhance performance, and follow best practices.
+)
+
+- Role: {Act as a senior developer. }
+- Task: {Refactor this code to be more readable and maintainable. Do NOT change the behavior.}
+- Code: {CODE}
+- Requirements: {REQUIREMENTS}
+- Format:{
+    Problems in Current Code
+    Refactored Code
+    Improvements Made
+    Performance Impact
+}
+
+7. Database Design Prompt
+- Role: {You are a Database Architect}
+- Task: {Design a scalable database schema}
+- Requirements / Context: {BUSINESS_REQUIREMENTS}
+- Format: {
+    Tables
+    Relationships
+    Indexes
+    Constraints
+    Optimization Recommendations
+}
+
+9. System Design Prompt (
+    - Definition: A prompt that asks an AI to architect a scalable, reliable, and maintainable system for a given problem. It's the technical equivalent of asking an architect to design a building before construction begins.
+    - Goal: Evaluate trade-offs, choose appropriate technologies, and produce a production-ready design that can handle real-world constraints.
+)
+- Role: You are a Principal Solution Architect.
+- Task: Design a scalable system.
+- Context: {
+    - Requirements: {SYSTEM_REQUIREMENTS}
+    - Expected Load: {EXPECTED_TRAFFIC}
+}
+Format:{
+    High-Level Architecture
+    Components
+    Data Flow
+    Scaling Strategy
+    Security
+    Failure Handling
+}
+
+10. Test Case Generation Prompt
+- Role: {Act as You are a QA Lead.}
+- Task: {Generate test cases.}
+- Context: {
+    - Feature:{FEATURE_DESCRIPTION}
+}
+- Format: {
+    Functional Tests
+    Validation Tests
+    Edge Cases
+    Security Tests
+    Regression Tests
+}
+
+11. Documentation Generation Prompt
+Role: {Act as you are a Technical Documentation Specialist}
+Task: {Generate documentation}
+Project Details/ Context: {PROJECT_DETAILS}
+Format: {
+    Overview
+    Architecture
+    Setup Instructions
+    API Documentation
+    Deployment Guide
+}
+
+12. Anti-Hallucination (
+    - Use this framework when accuracy is more important than speed.
+    - The AI should never invent requirements, assumptions, APIs, business rules, database schemas, or implementation details that are not explicitly provided.
+    - If information is missing, the AI must ask clarifying questions before proceeding.
+)
+- Role: {You are an experienced software engineer and solution architect}
+- Task: {TASK}
+- Context:{CONTEXT}
+- Instructions:{
+    Use only the information explicitly provided.
+    Do not assume requirements, business rules, technologies, or constraints.
+    Do not invent APIs, database fields, endpoints, configurations, or workflows.
+    If any information required to complete the task is missing, ambiguous, or contradictory, stop and ask clarifying questions.
+    Clearly separate:
+    Facts provided by the user
+    Assumptions (if explicitly requested)
+    Recommendations
+    If confidence is low, explain what additional information is needed.
+    Prefer asking questions over guessing.
+    If multiple interpretations exist, list them and ask the user which one is correct before proceeding.
+    Output Format:
+    Information Confirmed
+    Missing Information
+    Clarification Questions
+    Proposed Solution (Only if sufficient information exists)
+}
+
+13. KPI file Generate Prompt
+// Prompt
+Role:
+Act as a Senior Product Architect with 10+ years of experience designing enterprise-scale Travel & Expense Management Systems and defining KPI frameworks.
+
+Task:
+Generate a complete KPI.md document for an Enterprise Employee Travel & Expense Management System.
+
+Business Context:
+Organization:
+- 10,000+ employees
+- Multiple office locations
+- Frequent travel for client meetings, training, audits, conferences, and internal business activities
+
+Current Challenges:
+- Travel requests managed via emails and phone calls
+- Approvals tracked through phone calls and Excel sheets
+- Expense claims submitted using paper documents
+- Reimbursements are delayed and difficult to track
+- Lack of visibility and reporting
+- High manual effort
+- Poor audit readiness
+
+Required User Roles:
+1. Admin
+2. Management
+3. Employee
+
+Modules:
+
+Admin Dashboard:
+- Full system access
+- User Management
+- Travel Request Management
+- Approval Workflow Monitoring
+- Expense Claim Monitoring
+- Reimbursement Monitoring
+- Receipt Repository
+- Reports & Analytics
+- Audit Logs
+- Policy Management
+
+Management Dashboard:
+- Travel Request Management
+- Multi-Level Approval Workflow
+- Expense Claim Review
+- Reimbursement Processing
+- Receipt Verification
+- Team Reporting & Analytics
+- Team User Management
+
+Employee Dashboard:
+- Authentication
+- Travel Request Submission
+- Approval Tracking
+- Expense Claim Submission
+- Receipt Upload
+- Reimbursement Tracking
+
+Business Goals:
+- Reduce manual effort by 80%
+- Reduce travel approval time by 70%
+- Process reimbursements within 3 working days
+- Achieve 100% audit readiness
+- Improve employee satisfaction
+- Increase process visibility and compliance
+
+Scalability Requirements:
+- 10,000+ registered users
+- 1,000+ concurrent users
+- Peak load support up to 3,000 concurrent users
+- 99.95% system availability
+- API response time < 500ms
+- Dashboard load time < 3 seconds
+
+Output Requirements:
+- Generate a single KPI.md document containing:
+
+1. Executive Summary
+2. KPI Framework Overview
+3. Travel Request KPIs
+4. Approval Workflow KPIs
+5. Expense Claim KPIs
+6. Receipt Management KPIs
+7. Reimbursement KPIs
+8. User Adoption KPIs
+9. Reporting & Analytics KPIs
+10. Operational Efficiency KPIs
+11. Audit & Compliance KPIs
+12. System Performance KPIs
+13. Security KPIs
+14. Scalability KPIs
+15. Executive KPI Dashboard Summary
+
+For every KPI include:
+- KPI Name
+- Category
+- Definition
+- Formula
+- Target Value
+- Measurement Frequency
+- Data Source
+- Owner
+- Why This KPI Matters
+
+Output format:
+Markdown (.md)
+
+14. PRD documentgenerate from KPI
+
+Role: 
+- Act as a Senior Technical Product Manager with 10+ years of experience translating business metrics into product requirements.
+Task: 
