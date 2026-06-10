@@ -1,0 +1,809 @@
+/////////////////////Raw Problem Statement
+Project Name: Enterprise Employee Travel & Expense Management System
+Client Background
+We are a large organization with approximately 10,000+ employees operating across multiple locations. Employees frequently travel for client meetings, training programs, audits, conferences, and internal business activities.
+Currently, travel requests, approvals, expense claims, and reimbursements are managed through emails, Excel sheets, phone calls, and paper documents. This process is time-consuming, lacks visibility, and creates operational challenges.
+
+
+////////////////// Prompt to Generate KPI.md
+
+Act as a Senior Business Analyst and Product Manager.
+
+Based on the following project:
+
+**Project Name:** Enterprise Employee Travel & Expense Management System
+
+**Organization Size:** 10,000+ employees across multiple locations
+
+**Business Context:**
+Employees frequently travel for client meetings, training programs, audits, conferences, and internal business activities. Currently, travel requests, approvals, expense claims, and reimbursements are managed through emails, Excel sheets, phone calls, and paper documents, resulting in delays, lack of visibility, compliance issues, and operational inefficiencies.
+
+Generate a complete `kpi.md` document in Markdown format.
+
+The document should contain the following sections:
+
+# KPI Framework
+
+## 1. Executive Summary
+
+* Purpose of KPI measurement
+* Business goals supported by KPIs
+* Expected organizational impact
+
+## 2. Strategic Objectives
+
+Map KPIs to business objectives such as:
+
+* Process automation
+* Faster approvals
+* Reduced reimbursement cycle time
+* Cost optimization
+* Policy compliance
+* Employee satisfaction
+* Operational transparency
+
+## 3. Key Performance Indicators
+
+For each KPI provide:
+
+| KPI ID | KPI Name | Description | Formula | Target Value | Frequency | Owner |
+| ------ | -------- | ----------- | ------- | ------------ | --------- | ----- |
+
+Include KPIs across the following categories:
+
+### Travel Request KPIs
+
+Examples:
+
+* Travel Request Submission Volume
+* Travel Approval Turnaround Time
+* Travel Request Rejection Rate
+* Travel Cancellation Rate
+
+### Approval Workflow KPIs
+
+Examples:
+
+* Average Approval Time
+* Pending Approval Count
+* SLA Compliance Rate
+* Escalation Rate
+
+### Expense Management KPIs
+
+Examples:
+
+* Expense Claim Submission Rate
+* Average Claim Processing Time
+* Receipt Upload Compliance
+* Expense Error Rate
+* Duplicate Claim Detection Rate
+
+### Reimbursement KPIs
+
+Examples:
+
+* Average Reimbursement Cycle Time
+* Reimbursement Success Rate
+* Delayed Reimbursement Percentage
+* Finance Processing Efficiency
+
+### Compliance KPIs
+
+Examples:
+
+* Policy Violation Rate
+* Out-of-Policy Expense Percentage
+* Audit Findings Count
+* Compliance Score
+
+### Financial KPIs
+
+Examples:
+
+* Total Travel Spend
+* Department-wise Travel Cost
+* Cost Per Trip
+* Budget Utilization %
+* Travel Cost Savings
+
+### Employee Experience KPIs
+
+Examples:
+
+* Employee Satisfaction Score
+* System Adoption Rate
+* Self-Service Utilization Rate
+* Support Ticket Volume
+
+### System Performance KPIs
+
+Examples:
+
+* System Availability %
+* Average Response Time
+* Failed Transaction Rate
+* Peak Concurrent Users Supported
+
+## 4. KPI Dashboard Requirements
+
+Define dashboard widgets for:
+
+* Executives
+* Department Managers
+* Finance Team
+* HR/Admin Team
+
+For each dashboard include:
+
+* Metrics displayed
+* Visualization type
+* Refresh frequency
+
+## 5. KPI Targets
+
+Provide Year 1 target values such as:
+
+* Approval turnaround < 24 hours
+* Reimbursement completion < 5 business days
+* Policy compliance > 95%
+* System adoption > 90%
+* Uptime > 99.9%
+
+## 6. Success Metrics
+
+Define project success criteria after implementation:
+
+* Reduction in manual effort
+* Reduction in processing time
+* Improvement in employee satisfaction
+* Increase in policy compliance
+* Reduction in operational costs
+
+## 7. Data Sources
+
+Identify source systems:
+
+* Travel Requests
+* Expense Claims
+* Approval Logs
+* Finance Transactions
+* User Activity Logs
+* Audit Logs
+
+## 8. KPI Ownership Matrix
+
+Create a RACI-style table showing ownership of each KPI among:
+
+* Employee
+* Manager
+* Finance Team
+* HR/Admin
+* System Administrator
+* Executive Leadership
+
+## 9. Reporting Schedule
+
+Define:
+
+* Daily Reports
+* Weekly Reports
+* Monthly Reports
+* Quarterly Executive Reports
+
+## 10. KPI Review and Continuous Improvement
+
+Include:
+
+* KPI review process
+* Threshold management
+* Corrective actions
+* Continuous improvement recommendations
+
+Output the final result as a professional Markdown file named `kpi.md` suitable for enterprise documentation and stakeholder review.
+
+
+//////////////////// Prompt: Generate Enterprise PRD.md from KPI.md with Technology Constraints
+
+You are a Principal Product Manager, Enterprise Solution Architect, Technical Architect, and Senior Business Analyst.
+
+Your task is to generate a complete, implementation-ready `prd.md` document using the provided `kpi.md` file as the primary source of truth.
+
+The generated PRD must be detailed enough for:
+
+* Product Managers
+* Business Analysts
+* Solution Architects
+* UI/UX Teams
+* Frontend Developers
+* Backend Developers
+* Database Engineers
+* QA Engineers
+* DevOps Teams
+
+---
+
+# Core Rule
+
+Every feature, workflow, dashboard, API, database entity, and system component must directly support one or more KPIs defined in `kpi.md`.
+
+Create a Feature → KPI Traceability Matrix.
+
+---
+
+# Mandatory Technology Stack
+
+## Frontend
+
+Use:
+
+* React.js v19
+* Redux for state management
+* Axios for API communication
+* React Query for server state management and caching
+* Functional Components only
+* Custom Error Handling Framework
+* Lazy Loading
+* Virtual Scrolling for large datasets
+* Responsive UI
+* Role-Based Navigation
+* Protected Routes
+* Reusable Component Architecture
+
+Frontend Requirements:
+
+* Modular architecture
+* Feature-based folder structure
+* API abstraction layer
+* Global error boundary
+* Loading and skeleton states
+* Pagination support
+* Search and filtering
+* Form validation
+* Optimized rendering
+
+---
+
+## Backend
+
+Use:
+
+* Latest Node.js LTS
+* Express.js
+* Microservice Architecture
+* JWT Authentication
+* Role-Based Access Control (RBAC)
+* Middleware-based Authorization
+* Sequelize ORM
+* MySQL
+* Database Migrations
+* Seeders
+* Centralized Error Handling
+* Request Validation
+* Logging
+* API Versioning
+
+Security Requirements:
+
+* SQL Injection Prevention
+* Input Sanitization
+* JWT Refresh Strategy
+* Secure Password Hashing
+* Rate Limiting
+* CORS Configuration
+* Helmet Security Headers
+* Audit Logging
+
+Backend Standards:
+
+* Controller Layer
+* Service Layer
+* Repository Layer
+* Middleware Layer
+* Validation Layer
+
+---
+
+## Database
+
+Use:
+
+* MySQL
+
+Database Requirements:
+
+* Proper Normalization
+* Foreign Keys
+* Indexing Strategy
+* Relationship Mapping
+* Query Optimization
+* Soft Deletes
+* Audit Columns
+* Performance Optimization
+
+Required Relationship Types:
+
+* One-to-One
+* One-to-Many
+* Many-to-Many
+
+Include:
+
+* ER Diagram
+* Table Definitions
+* Index Strategy
+* Foreign Key Definitions
+
+---
+
+# Output Structure
+
+Generate a complete Markdown file named `prd.md`.
+
+---
+
+# 1. Product Overview
+
+* Product Name
+* Problem Statement
+* Business Context
+* KPI Alignment
+* Business Goals
+
+---
+
+# 2. Product Vision
+
+* Mission
+* Strategic Objectives
+* Expected Outcomes
+
+---
+
+# 3. Stakeholders
+
+* Employees
+* Managers
+* Department Heads
+* Finance Team
+* HR/Admin
+* System Admin
+* Executive Leadership
+
+---
+
+# 4. User Personas
+
+Detailed personas including:
+
+* Responsibilities
+* Goals
+* Pain Points
+* KPIs impacted
+
+---
+
+# 5. Functional Modules
+
+## Travel Request Management
+
+Features:
+
+* Create Travel Request
+* Edit Request
+* Cancel Request
+* Travel History
+* Travel Status Tracking
+
+Generate:
+
+* Functional Requirements
+* Business Rules
+* Validation Rules
+* Acceptance Criteria
+
+---
+
+## Approval Workflow Management
+
+Features:
+
+* Multi-Level Approval
+* Approval Matrix
+* Delegation
+* Escalation
+* Auto Reminder
+
+Generate:
+
+* Workflow Rules
+* SLA Logic
+* Acceptance Criteria
+
+---
+
+## Expense Management
+
+Features:
+
+* Expense Submission
+* Receipt Upload
+* Expense Categories
+* Currency Support
+* Policy Validation
+
+Generate:
+
+* Validation Rules
+* Business Logic
+* Acceptance Criteria
+
+---
+
+## Reimbursement Management
+
+Features:
+
+* Claim Verification
+* Approval
+* Payment Tracking
+* Reimbursement History
+
+---
+
+## Reporting & Analytics
+
+Generate dashboards required for KPI tracking.
+
+---
+
+## Administration Module
+
+Features:
+
+* User Management
+* Role Management
+* Policy Configuration
+* Workflow Configuration
+* Audit Management
+
+---
+
+# 6. User Stories
+
+Generate detailed user stories for all modules.
+
+Format:
+
+As a [Role]
+I want [Action]
+So that [Business Benefit]
+
+Acceptance Criteria:
+
+* AC1
+* AC2
+* AC3
+
+---
+
+# 7. Frontend Architecture
+
+Generate:
+
+## Folder Structure
+
+Example:
+
+```text
+src/
+ ├── features/
+ ├── pages/
+ ├── components/
+ ├── services/
+ ├── redux/
+ ├── hooks/
+ ├── utils/
+ ├── routes/
+ ├── layouts/
+ └── assets/
+```
+
+### State Management Design
+
+* Redux Store Structure
+* Slices
+* Async Actions
+
+### React Query Usage
+
+* Query Strategy
+* Cache Strategy
+* Refetch Rules
+
+### Performance Optimizations
+
+* Lazy Loading
+* Code Splitting
+* Virtual Scroll
+* Memoization
+
+### Error Handling
+
+* Global Error Boundary
+* API Error Handler
+* User Friendly Messages
+
+---
+
+# 8. Backend Architecture
+
+Generate:
+
+## Microservices
+
+Example:
+
+### User Service
+
+### Travel Service
+
+### Approval Service
+
+### Expense Service
+
+### Reimbursement Service
+
+### Notification Service
+
+### Reporting Service
+
+For each service provide:
+
+* Responsibilities
+* APIs
+* Database Access
+* Dependencies
+
+---
+
+## API Design
+
+Generate REST APIs:
+
+Method
+Endpoint
+Purpose
+Role Access
+
+Example:
+
+POST /api/v1/travel-requests
+GET /api/v1/travel-requests
+PUT /api/v1/travel-requests/:id
+DELETE /api/v1/travel-requests/:id
+
+---
+
+## Middleware Design
+
+Generate:
+
+* JWT Middleware
+* RBAC Middleware
+* Validation Middleware
+* Error Middleware
+* Audit Middleware
+
+---
+
+# 9. Database Design
+
+Generate:
+
+## Tables
+
+### Users
+
+### Roles
+
+### Departments
+
+### Travel Requests
+
+### Travel Approvals
+
+### Expense Claims
+
+### Expense Items
+
+### Receipts
+
+### Reimbursements
+
+### Notifications
+
+### Audit Logs
+
+For each table define:
+
+* Columns
+* Data Types
+* Constraints
+* Primary Keys
+* Foreign Keys
+
+---
+
+## Relationships
+
+Generate detailed relationships.
+
+Example:
+
+Users → Travel Requests
+Travel Requests → Approvals
+Travel Requests → Expenses
+Expenses → Reimbursements
+
+---
+
+## Indexing Strategy
+
+Define indexes for:
+
+* Search
+* Reporting
+* Dashboard Queries
+* Approval Queues
+
+---
+
+# 10. Security Architecture
+
+Generate:
+
+* JWT Flow
+* Authentication Flow
+* Authorization Flow
+* SQL Injection Prevention
+* Input Validation
+* Password Hashing
+* Session Strategy
+* Audit Logging
+
+---
+
+# 11. KPI Traceability Matrix
+
+| KPI | Feature | Module | Success Criteria |
+| --- | ------- | ------ | ---------------- |
+
+---
+
+# 12. Reporting & Dashboard Requirements
+
+Generate dashboards for:
+
+* Executive
+* Finance
+* Managers
+* HR/Admin
+
+Include:
+
+* KPIs
+* Widgets
+* Charts
+* Refresh Frequency
+
+---
+
+# 13. Non-Functional Requirements
+
+Performance:
+
+* API Response < 2 seconds
+* Dashboard Load < 3 seconds
+
+Availability:
+
+* 99.9% uptime
+
+Scalability:
+
+* Support 10,000+ employees
+
+Security:
+
+* OWASP compliance
+
+Reliability:
+
+* Fault tolerant architecture
+
+---
+
+# 14. Testing Requirements
+
+Generate:
+
+* Unit Testing
+* Integration Testing
+* API Testing
+* Security Testing
+* Performance Testing
+* UAT
+
+---
+
+# 15. Deployment Architecture
+
+Generate:
+
+* Development Environment
+* QA Environment
+* Production Environment
+
+Include:
+
+* CI/CD Pipeline
+* Environment Variables
+* Logging
+* Monitoring
+
+---
+
+# 16. MVP Roadmap
+
+Phase 1:
+Travel Requests
+
+Phase 2:
+Approvals
+
+Phase 3:
+Expense Claims
+
+Phase 4:
+Reimbursements
+
+Phase 5:
+Analytics & Reporting
+
+---
+
+# 17. Future Enhancements
+
+* Mobile App
+* OCR Receipt Processing
+* AI Fraud Detection
+* ERP Integration
+* SAP Integration
+* Corporate Card Integration
+
+Generate a complete enterprise-grade PRD suitable for direct use by engineering and product teams. The output should be detailed, implementation-oriented, and fully aligned with the KPIs provided in `kpi.md`.
+
+
+/// this prompt is for to generate scope.md file 
+
+@personas/03-06-2026/kpi.md, @personas/03-06-2026/prd.md, 
+by refering this two file create a scope document within you need to ensure. 
+kpi.md file points and consaint, 
+function and non- functional requirement, 
+Use only the information explicitly provided.
+Do not assume requirements, 
+business rules, 
+technologies, or constraints. 
+Do not invent APIs, 
+database fields, 
+endpoints, 
+configurations, or workflows. 
+If any information required to complete the task is missing, ambiguous, or contradictory, stop and ask clarifying questions.
+Clearly separate: 
+Facts provided by the user Assumptions (if explicitly requested) 
+Recommendations If confidence is low, 
+explain what additional information is needed.
+Prefer asking questions over guessing.
+If multiple interpretations exist, list them and ask the user which one is correct before proceeding.
+Output Format: Information Confirmed Missing Information Clarification Questions Proposed Solution (Only if sufficient information exists)

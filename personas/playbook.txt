@@ -284,10 +284,77 @@ For every KPI include:
 - Why This KPI Matters
 
 Output format:
-Markdown (.md)
+KPI.md file
 
 14. PRD documentgenerate from KPI
 
 Role: 
 - Act as a Senior Technical Product Manager with 10+ years of experience translating business metrics into product requirements.
 Task: 
+- Generate a complete Production Requirements Document (PRD.md).
+Context:
+- KPI.md file Data
+- frontend (
+    - React.js version 19
+    - redux for statemanagement
+    - axios
+    - react query
+    - error Handling
+    - virtual scroll
+    - lazy load
+    - use functional Components
+)
+- backend (
+    - node.js latest version
+    - express.js
+    - microservice
+    - jwt
+    - prevent sql injection
+    - sequlize orm
+    - migration & seeders file
+    - use middliware for auth and role base access of APIs
+)
+- database (
+    - mysql
+    - indexing
+    - Relationships
+    - foreign key
+    - db optimise
+)
+Format:
+- Insdustrial standard PRD document.
+- Extract requirements only from the provided information.
+- If information is missing, explicitly document assumptions.
+- Identify stakeholders, workflows, functional requirements, and non-functional requirements.
+- Think like an enterprise product owner.
+
+
+ast as a senior developer with 10+years of experience. need to create test case for this projects feature. use vitest library and coverage should be 70 to 80 percent. note don't change any developed code. Use this framework when accuracy is more important than speed.If information is missing, the AI must ask clarifying questions before proceeding. again don't change any source code we only need to write test case.
+
+
+/// this prompt is for to generate scope.md file 
+
+@personas/03-06-2026/kpi.md, @personas/03-06-2026/prd.md, 
+by refering this two file create a scope document within you need to ensure. 
+kpi.md file points and consaint, 
+function and non- functional requirement, 
+Use only the information explicitly provided.
+Do not assume requirements, 
+business rules, 
+technologies, or constraints. 
+Do not invent APIs, 
+database fields, 
+endpoints, 
+configurations, or workflows. 
+If any information required to complete the task is missing, ambiguous, or contradictory, stop and ask clarifying questions.
+Clearly separate: 
+Facts provided by the user Assumptions (if explicitly requested) 
+Recommendations If confidence is low, 
+explain what additional information is needed.
+Prefer asking questions over guessing.
+If multiple interpretations exist, list them and ask the user which one is correct before proceeding.
+Output Format: Information Confirmed Missing Information Clarification Questions Proposed Solution (Only if sufficient information exists)
+
+
+// prompt to generate project boundry fields
+@personas/03-06-2026/prd.md , @personas/03-06-2026/kpi.md , @personas/03-06-2026/scope.md by referning this file need to generate project boundry file `project_boundry.md` which consits overall summary of my project with directory and folder structure. Use only the information explicitly provided.Do not assume requirements, business rules, technologies, or constraints. Do not invent APIs, database fields, endpoints, configurations, or workflows. If any information required to complete the task is missing, ambiguous, or contradictory, stop and ask clarifying questions.Clearly separate: Facts provided by the user Assumptions (if explicitly requested) Recommendations If confidence is low, explain what additional information is needed. Prefer asking questions over guessing.    If multiple interpretations exist, list them and ask the user which one is correct before proceeding.  Output Format: Information Confirmed Missing Information Clarification Questions Proposed Solution (Only if sufficient information exists)
